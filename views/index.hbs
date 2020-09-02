@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <div class="bodyWrapper">
+    <div class="searchDiv">
+      <a href="#"><img class="logoImage" src="assets/images/logo.png" alt="logo" /></a>
+      <form class="searchForm" action="/" method="post">
+        <div class="searchInputContainer">
+          <input class="searchInput" type="text" name="inputWord" placeholder="Enter a word to get Urban dictionary definition and related audios...">
+
+          <button class="submitButton">Search</button>
+          <!-- <button class="submitButton">Search</button> -->
+        </div>
+      </form>
+
+    </div>
+    <div class="errorMessage">
+      <h2>{{_error}}</h2>
+    </div>
+
+    <div class="urbarnDictionaryCol">
+      <h1 class=urbanHeading>{{_inputWord}}</h1>
+      <h2>{{_wordObject.definition}}</h2>
+        <h3>{{_wordObject.example}}</h3>
+          <!-- <audio controls="true" preload="none" controlsList="nodownload">
+            <source src={{_wordObject.soundUrl}} type="audio/mp4">
+            <source src={{_wordObject.soundUrl}} type="audio/webm">
+          </audio> -->
+    </div>
+    <!-- <hr> -->
+    <div class="audioCol">
+      <h1 class="urbanHeading">{{_audioTitle}}<h1>
+    {{#each _objectArray}}
+      <h2>{{this.title}}</h2>
+      <audio controls="true" preload="none" controlsList="nodownload">
+        <source src={{this.url}} type="audio/mp4">
+        <source src={{this.url}} type="audio/webm">
+      </audio>
+    {{/each}}
+  </div>
+  </div><!-- end of bodyWrapper -->
+
+
+</body>
+<div class="footer">
+  <footer>&copy; Copyright {{_currentYear}} eddieprogramming</footer>
+</div>
+
+</html>
+
+
+<!-- res.render("index", {
+  _inputWord: inputWord,
+  _API_KEY: API_KEY,
+  _startPoint: startPoint,
+  _duration: duration,
+  _audioPart: audioPart,
+  _title: title
+}); -->
+<!-- 'https://voicecup.com/play?key=Rd3VRDQoDp&filename=2F0jfj1d0nJ0dNs5_vid_2&filetype=mp4&start=3378.309&duration=4.200' -->
+<!-- <source src='https://voicecup.com/play?key={{_API_KEY}}&filename={{_audioPart}}&filetype=mp4&start={{_startPoint}}&duration={{_duration}}' type="audio/mp4"> -->

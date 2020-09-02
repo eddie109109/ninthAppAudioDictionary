@@ -1,0 +1,105 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  min-height: 100%;
+  min-width: 100%;
+  line-height: 1.5em;
+  min-width: 600px;
+}
+
+.bodyWrapper {
+  min-height: 700px;
+}
+
+.logoImage {
+  hover: pointer;
+  width: 100px;
+
+}
+
+.searchForm {
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
+  margin: 30px 200px;
+  vertical-align: middle;
+  width: 50%;
+  height: 56px;
+  position: relative;
+  border: none;
+  line-height: 1.5em;
+  text-align: center;
+
+  /* display: flex; */
+  display: inline-block;
+}
+
+
+.submitButton {
+  vertical-align: middle;
+  outline: none;
+  float: right;
+  padding: 17px;
+  font-size: 19.2px;
+  /* margin: 2px; */
+  border: none;
+  background: #fff;
+  background: grey;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+
+
+.searchInput {
+
+  flex: 1;
+  width: 80%;
+  padding: 1em 0em 1em 0.5em;
+  /* text-align: start; */
+  outline: none;
+  border: none;
+  font-size: 17px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.searchInputContainer {
+  overflow: hidden;
+  vertical-align: middle;
+  /* display: block; */
+}
+
+.searchDiv {
+  background: #314089;
+  display: block;
+}
+
+.urbarnDictionaryCol {
+  text-align:left;
+  margin-left: 10px;
+}
+
+.urbarnDictionaryCol h1 {
+  text-align:center;
+}
+
+.urbanHeading {
+  color: #D3BE24;
+}
+
+.audioCol {
+  margin: 15px;
+}
+
+.errorMessage {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  background: #314089;
+  padding: 30px;
+}
